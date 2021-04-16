@@ -1,0 +1,12 @@
+﻿  main.c
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(191): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(212): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(218): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(227): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(226): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(242): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(249): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(259): warning C4018: “<”: 有符号/无符号不匹配
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(247): warning C4305: “初始化”: 从“double”到“float”截断
+d:\files\learning materials\y3\semester-2\cpt202\vr\reduce\project1\project1\main.c(298): warning C4244: “函数”: 从“uint64_t”转换到“size_t”，可能丢失数据
+  Project1.vcxproj -> D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\reduce\Project1\Debug\Project1.exe
