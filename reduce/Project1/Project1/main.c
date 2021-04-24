@@ -268,10 +268,10 @@ int SimpleDenoise_Proc(SimpleDenoiseHandle *handle, const float *input, float *o
 
 void simpleDenoise(char *in_file, char *out_file)
 {
-    if (in_file == NULL || out_file == NULL) {
-        //printUsage();
-        return;
-    }
+    //if (in_file == NULL || out_file == NULL) {
+    //    //printUsage();
+    //    return;
+    //}
     uint32_t sampleRate = 0;
     uint64_t sampleCount = 0;
     uint32_t channels = 0;
