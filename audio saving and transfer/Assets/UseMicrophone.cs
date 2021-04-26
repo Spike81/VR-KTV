@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using System.Collections;
+using System.Runtime.InteropServices;
 
 
 [RequireComponent(typeof(AudioSource))]
@@ -17,6 +18,9 @@ using System.Collections;
 
 public class UseMicrophone : MonoBehaviour
 {
+    [DllImport("D:/Files/Learning Materials/Y3/Semester-2/CPT202/VR/audio saving and transfer/Library/Project1.dll", EntryPoint = "denoise")]
+    static extern unsafe int denoise(char[] in_file, char[] out_file);
+
     const int HEADER_SIZE = 44;
 
     private AudioSource aud;
@@ -103,7 +107,8 @@ public class UseMicrophone : MonoBehaviour
 
     }
 
-    private void OnClickEndBtn()
+
+    private unsafe void OnClickEndBtn()
 
     {
 
@@ -120,6 +125,15 @@ public class UseMicrophone : MonoBehaviour
         Microphone.End(devices[0]);
 
         Save("audio\\audio.wav", aud.clip); //将录音保存为mp3
+
+
+        string in_file = "audio\\audio.wav";
+        char[] in_files = in_file.ToCharArray();
+
+        string out_files = "audio\\a.wav";
+        char[] out_file = out_files.ToCharArray();
+
+        denoise(in_files, out_file);
 
     }    
 
