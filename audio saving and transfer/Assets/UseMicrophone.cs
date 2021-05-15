@@ -10,6 +10,7 @@ using System.Text;
 using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 
 [RequireComponent(typeof(AudioSource))]
@@ -18,9 +19,6 @@ using System.Runtime.InteropServices;
 
 public class UseMicrophone : MonoBehaviour
 {
-    [DllImport("D:/Files/Learning Materials/Y3/Semester-2/CPT202/VR/audio saving and transfer/Library/Project1.dll", EntryPoint = "denoise")]
-    static extern unsafe int denoise(char[] in_file, char[] out_file);
-
     const int HEADER_SIZE = 44;
 
     private AudioSource aud;
@@ -108,7 +106,7 @@ public class UseMicrophone : MonoBehaviour
     }
 
 
-    private unsafe void OnClickEndBtn()
+    private void OnClickEndBtn()
 
     {
 
@@ -124,17 +122,25 @@ public class UseMicrophone : MonoBehaviour
 
         Microphone.End(devices[0]);
 
-        Save("audio\\audio.wav", aud.clip); //将录音保存为mp3
+        Save("audio/sample.wav", aud.clip); //将录音保存为mp3
 
 
-        string in_file = "audio\\audio.wav";
-        char[] in_files = in_file.ToCharArray();
+        string wav = "audio/sample.wav";
+        using (Process proc = new Process())
+        {
+            String cd = Directory.GetCurrentDirectory();
+            
+            proc.StartInfo.FileName = cd + "\\Assets\\SimpleDenoise.exe";
+            proc.StartInfo.Arguments = string.Format(@" ""{0}""", wav);
 
-        string out_files = "audio\\a.wav";
-        char[] out_file = out_files.ToCharArray();
+            proc.StartInfo.CreateNoWindow = true;
 
-        denoise(in_files, out_file);
+            proc.StartInfo.UseShellExecute = false;
 
+            proc.StartInfo.RedirectStandardOutput = true;
+            proc.Start();
+            proc.Close();
+        }
     }    
 
     private void OnClickPlayBtn()
@@ -151,10 +157,6 @@ public class UseMicrophone : MonoBehaviour
 
         }
 
-        //WWW www = new WWW("D:\\Files\\Learning Materials\\Y3\\Semester-2\\CPT202\\VR\\audio\\audio.wav");
-        //var clipTemp = www.GetAudioClip();
-        //aud.clip = clipTemp;
-
         //播放录音
 
         aud.Play();
@@ -166,7 +168,7 @@ public class UseMicrophone : MonoBehaviour
     public static bool Save(string filename, AudioClip clip)
     {
 
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
         if (!filename.ToLower().EndsWith(".wav"))
         {
             filename += ".wav";
@@ -186,7 +188,7 @@ public class UseMicrophone : MonoBehaviour
 #endif
 
         //		string filepath = Path.Combine(Application.persistentDataPath, filename);
-        Debug.Log(filepath);
+        //Debug.Log(filepath);
 
         // Make sure directory exists if user is saving to sub dir.
         Directory.CreateDirectory(Path.GetDirectoryName(filepath));

@@ -1,0 +1,15 @@
+﻿  Building Custom Rule D:/Files/Learning Materials/Y3/Semester-2/CPT202/VR/新建文件夹/SimpleAudioDenoise-master/CMakeLists.txt
+  main.c
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(192): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(213): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(219): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(228): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(227): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(243): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(250): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(260): warning C4018: “<”: 有符号/无符号不匹配
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(248): warning C4305: “初始化”: 从“double”到“float”截断
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(299): warning C4244: “函数”: 从“uint64_t”转换到“size_t”，可能丢失数据
+D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\main.c(362): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\stdio.h(1774): note: 参见“sprintf”的声明
+  SimpleDenoise.vcxproj -> D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\Debug\SimpleDenoise.exe

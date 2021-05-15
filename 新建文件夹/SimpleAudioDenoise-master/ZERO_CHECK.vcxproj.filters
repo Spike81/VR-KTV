@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Files\Learning Materials\Y3\Semester-2\CPT202\VR\新建文件夹\SimpleAudioDenoise-master\CMakeFiles\3c1db23e4c3042544b103ae9163234a7\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{95C764DA-949F-33AA-89A9-70858894F3D8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
